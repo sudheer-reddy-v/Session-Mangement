@@ -3,7 +3,7 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.core.JdbcTemplate;
+//import org.springframework.jdbc.core.JdbcTemplate;
 
 @SpringBootApplication
 public class SessionManagerApplication {
@@ -14,9 +14,9 @@ public class SessionManagerApplication {
 		SpringApplication.run(SessionManagerApplication.class, args);
 	}
 	
-	@Bean
-	JdbcTemplate getJDBCTemplate(){
-		return new JdbcTemplate();
-	}
+//	@Bean
+//	JdbcTemplate getJDBCTemplate(){
+//		return new JdbcTemplate();
+//	}
 
 }

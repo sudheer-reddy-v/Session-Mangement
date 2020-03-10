@@ -1,10 +1,11 @@
-package dbService;
+package com.example.demo.dbService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+//import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import pojo.EmployeeDetails;
+import com.example.demo.pojo.EmployeeDetails;
 
 @Repository
 public class EmployeeInfromation {

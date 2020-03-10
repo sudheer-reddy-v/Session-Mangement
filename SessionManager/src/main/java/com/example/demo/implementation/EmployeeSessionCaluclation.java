@@ -1,15 +1,17 @@
-package implementation;
+package com.example.demo.implementation;
 
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import dbService.EmployeeInfromation;
-import pojo.EmployeeDetails;
+import com.example.demo.dbService.EmployeeInfromation;
+import com.example.demo.pojo.EmployeeDetails;
 
-@Controller
+@RestController
 public class EmployeeSessionCaluclation {
 	
 	
@@ -18,7 +20,7 @@ public class EmployeeSessionCaluclation {
 	
 	Date date;
 	
-	@RequestMapping("/login")
+	@GetMapping("/login")
 	public void Login(EmployeeDetails info) {
 		date=new Date();
 		info.setLoginTime(date.getTime());
@@ -26,7 +28,7 @@ public class EmployeeSessionCaluclation {
 		
 	}
 	
-	@RequestMapping("/logout")
+	@GetMapping("/logout")
 	public void logout(EmployeeDetails info) {
 		date=new Date();
 		info.setLogoutTime(date.getTime());
