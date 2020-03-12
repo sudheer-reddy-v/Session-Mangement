@@ -1,20 +1,34 @@
 package com.example.demo.pojo;
 
-import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+import org.hibernate.annotations.DynamicUpdate;
+
+@Entity
+@DynamicUpdate
 public class EmployeeDetails {
 
-	private String EmployeeID;
+	@Id
+	@Column(name="EMPLOYEEID")
+	private String employeeID;
+	@Column(name="REQUESTID")
 	private String requestID;
+	@Column(name="LOGINTIME")
 	private long loginTime;
+	@Column(name="LOGOUTTIME")
 	private long logoutTime;
 	
+	public EmployeeDetails() {
+		
+	}
 	
 	public String getEmployeeID() {
-		return EmployeeID;
+		return employeeID;
 	}
 	public void setEmployeeID(String employeeID) {
-		EmployeeID = employeeID;
+		this.employeeID = employeeID;
 	}
 	public String getRequestID() {
 		return requestID;
